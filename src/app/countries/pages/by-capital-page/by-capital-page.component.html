@@ -1,0 +1,21 @@
+<!-- TODO: FTC VIDEO 121 -->
+<h1>Por Capital</h1>
+<hr />
+<div class="row">
+  <div class="col">
+    <!-- (onValue)="searchByCapital($event)" -->
+    <shared-search-box
+      (onDebounce)="searchByCapital($event)"
+      [initialValue]= "initialValue"
+      placeholder="Buscar por Capital"
+    ></shared-search-box>
+    <br />
+  </div>
+</div>
+
+<div class="row">
+  <hr />
+  <shared-loading-spinner *ngIf="isLoading"></shared-loading-spinner>
+  <!-- TODO FTC VIDEO 125 -->
+  <countries-table [countries]="countries"> </countries-table>
+</div>

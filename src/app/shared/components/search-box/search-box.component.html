@@ -1,0 +1,10 @@
+<!-- (keyup.enter)="emitValue(txtInput.value)" -->
+<!-- TODO: FTC VIDEO 121 -->
+<input
+  type="text"
+  [value] = "initialValue"
+  [placeholder]="placeholder"
+  class="form-control"
+  (keyup)="onKeyPress(txtInput.value)"
+  #txtInput
+/>
